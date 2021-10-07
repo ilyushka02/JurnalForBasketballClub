@@ -2,48 +2,51 @@ package com.mycompany.jurnal;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
 public class SecondaryController {
 
-    @FXML
-    private ResourceBundle resources;
+        @FXML
+    private TextField lastNameFild;
 
     @FXML
-    private URL location;
+    private TextField namefild;
 
     @FXML
-    private TextField loginFild;
+    private TextField secondNameFild;
 
     @FXML
-    private TextField loginFild1;
+    private TextField phone;
 
     @FXML
-    private TextField loginFild2;
-
-    @FXML
-    private TextField loginFild3;
+    private ChoiceBox<?> groupBox;
 
     @FXML
     private Button backBtn;
 
     @FXML
+    private ChoiceBox<?> genderBox;
+
+    @FXML
+    private TextField loginFild;
+
+    @FXML
+    private PasswordField passwordFild;
+
+    @FXML
     void back(ActionEvent event) throws IOException {
         App.setRoot("Primary");
     }
-    
     @FXML
-    void styleForDef(MouseEvent event) {
-        backBtn.setStyle("-fx-background-color: white");
+    void innitialize() {
+        
     }
-
-    @FXML
-    void styleForEntered(MouseEvent event) {
-        backBtn.setStyle("-fx-background-color: gray");
-    }    
 }
