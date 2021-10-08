@@ -7,7 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javax.persistence.*;
+
 public class SecondaryController {
     
         @FXML

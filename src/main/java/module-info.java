@@ -8,5 +8,6 @@ module com.mycompany.jurnal {
     
 
     opens com.mycompany.jurnal to javafx.fxml;
+    opens com.mycompany.jurnal.db;
     exports com.mycompany.jurnal;
 }

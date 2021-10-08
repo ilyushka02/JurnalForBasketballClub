@@ -20,8 +20,8 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("primary"), 500 , 500);
         stage.setScene(scene);
-        stage.setTitle("bcNRTC");//Сажает "Название приложение"
-        stage.getIcons().add(new Image(App.class.getResourceAsStream("icon.png")));// сажает иконку
+        stage.setTitle("bcNRTC");
+        stage.getIcons().add(new Image(App.class.getResourceAsStream("image/icon.png")));
         stage.show();
     }
 
