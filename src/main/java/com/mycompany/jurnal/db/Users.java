@@ -179,5 +179,5 @@ public class Users implements Serializable {
     public String toString() {
         return "com.mycompany.jurnal.db.Users[ idUser=" + idUser + " ]";
     }
-    
+
 }

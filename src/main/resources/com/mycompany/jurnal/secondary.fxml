@@ -67,6 +67,6 @@
       <TextField fx:id="loginFild" layoutX="98.0" layoutY="371.0" prefHeight="28.0" prefWidth="158.0" promptText="new login" styleClass="text" stylesheets="@Style.css" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7cc901" height="30.0" layoutX="97.0" layoutY="420.0" stroke="#7cc901" strokeType="INSIDE" width="160.0" />
       <PasswordField fx:id="passwordFild" layoutX="98.0" layoutY="421.0" prefHeight="28.0" prefWidth="158.0" promptText="new password" style="-fx-background-color: fff;" />
-      <Button layoutX="101.0" layoutY="470.0" mnemonicParsing="false" styleClass="buttonstyle" stylesheets="@Style.css" text="Создать новый аккаунт" textFill="WHITE" />
+      <Button fx:id="AddUserBtn" layoutX="101.0" layoutY="470.0" mnemonicParsing="false" onAction="#createUser" styleClass="buttonstyle" stylesheets="@Style.css" text="Создать новый аккаунт" textFill="WHITE" />
    </children>
 </AnchorPane>

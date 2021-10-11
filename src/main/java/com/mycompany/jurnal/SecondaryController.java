@@ -7,10 +7,16 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
 public class SecondaryController {
+    public static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("com.mycompany_Jurnal_jar_1.0-SNAPSHOTPU");
+    //                                                                                     com.mycompany_Jurnal_jar_1.0-SNAPSHOTPU
+    public static EntityManager em = emf.createEntityManager();
     
-        @FXML
+    @FXML
     private TextField lastNameFild;
 
     @FXML
@@ -39,10 +45,10 @@ public class SecondaryController {
 
     @FXML
     void back(ActionEvent event) throws IOException {
-        App.setRoot("Primary");
-    }
+      App.setRoot("Primary");  
+    }   
     @FXML
-    void innitialize() {
-        
+    void createUser(ActionEvent event){
+    
     }
 }
