@@ -11,10 +11,16 @@
 .addUserBtn{
     -fx-background-image: url('image/icons-add-user.png');
     -fx-background-size: 100% 100%;  
-    -fx-cursor:hand;
+     
 }
 .backBtn{
     -fx-background-image: url('image/icons-back.png');
+    -fx-background-size: 100% 100%; 
+    -fx-cursor:hand;
+}
+
+.exitBtn{
+    -fx-background-image: url('image/icons-exit.png');
     -fx-background-size: 100% 100%; 
     -fx-cursor:hand;
 }

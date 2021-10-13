@@ -23,7 +23,7 @@
       <TextField fx:id="loginFild" layoutX="166.0" layoutY="156.0" prefHeight="28.0" prefWidth="168.0" promptText="login" styleClass="text" stylesheets="@Style.css" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7cc901" height="30.0" layoutX="166.0" layoutY="204.0" stroke="#7cc901" strokeType="INSIDE" width="170.0" />
       <PasswordField fx:id="passwordField" layoutX="167.0" layoutY="205.0" prefHeight="28.0" prefWidth="168.0" promptText="password" styleClass="text" stylesheets="@Style.css" />
-      <Button fx:id="loginBtn" layoutX="191.0" layoutY="264.0" mnemonicParsing="false" onAction="#switchToSecondary" prefHeight="20.0" prefWidth="120.0" styleClass="buttonstyle" stylesheets="@Style.css" text="LOGIN" textFill="WHITE">
+      <Button fx:id="loginBtn" layoutX="191.0" layoutY="264.0" mnemonicParsing="false" onAction="#login" prefHeight="20.0" prefWidth="120.0" styleClass="buttonstyle" stylesheets="@Style.css" text="LOGIN" textFill="WHITE">
          <font>
             <Font name="Javanese Text" size="8.0" />
          </font>

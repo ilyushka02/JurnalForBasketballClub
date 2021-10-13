@@ -32,7 +32,8 @@ import javax.persistence.Table;
     @NamedQuery(name = "Users.findByGender", query = "SELECT u FROM Users u WHERE u.gender = :gender"),
     @NamedQuery(name = "Users.findByGroup", query = "SELECT u FROM Users u WHERE u.group = :group"),
     @NamedQuery(name = "Users.findByUserName", query = "SELECT u FROM Users u WHERE u.userName = :userName"),
-    @NamedQuery(name = "Users.findByUserPassword", query = "SELECT u FROM Users u WHERE u.userPassword = :userPassword")})
+    @NamedQuery(name = "Users.findByUserPassword", query = "SELECT u FROM Users u WHERE u.userPassword = :userPassword"),
+    @NamedQuery(name = "Users.findByRole", query = "SELECT u FROM Users u WHERE u.role = :role")})
 public class Users implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -64,6 +65,8 @@ public class Users implements Serializable {
     @Basic(optional = false)
     @Column(name = "userPassword")
     private String userPassword;
+    @Column(name = "Role")
+    private String role;
 
     public Users() {
     }
@@ -155,6 +158,14 @@ public class Users implements Serializable {
         this.userPassword = userPassword;
     }
 
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
     @Override
     public int hashCode() {
         int hash = 0;
@@ -179,5 +190,5 @@ public class Users implements Serializable {
     public String toString() {
         return "com.mycompany.jurnal.db.Users[ idUser=" + idUser + " ]";
     }
-
+    
 }
