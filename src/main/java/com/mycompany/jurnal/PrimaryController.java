@@ -45,15 +45,14 @@ public class PrimaryController {
             // Аутентификация
             Users u = (Users) q.getSingleResult();
             if (u.getUserPassword().equals(passwordField.getText())) {
-                
-                
+             
                 // Авторизация
-//                String roleName = u.getRole().getName();
-//                if (roleName.equals("administrator")) {
+                String roleName = u.getRole().toString();
+                if (roleName.equals("root")) {
+                    App.setRoot("rootPage");
+                } else {
                     App.setRoot("mainPage");
-//                } else {
-//                    App.setRoot("journal");
-//                }
+                }
             } else {
                 System.out.println("Неверный логин или пароль");
             }

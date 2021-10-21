@@ -42,27 +42,20 @@ public class Users implements Serializable {
     @Basic(optional = false)
     @Column(name = "idUser")
     private Integer idUser;
-    @Basic(optional = false)
     @Column(name = "LastName")
     private String lastName;
-    @Basic(optional = false)
     @Column(name = "Name")
     private String name;
     @Column(name = "SecondName")
     private String secondName;
-    @Basic(optional = false)
     @Column(name = "Phone")
-    private int phone;
-    @Basic(optional = false)
+    private Integer phone;
     @Column(name = "Gender")
     private String gender;
-    @Basic(optional = false)
     @Column(name = "Group")
     private String group;
-    @Basic(optional = false)
     @Column(name = "userName")
     private String userName;
-    @Basic(optional = false)
     @Column(name = "userPassword")
     private String userPassword;
     @Column(name = "Role")
@@ -73,17 +66,6 @@ public class Users implements Serializable {
 
     public Users(Integer idUser) {
         this.idUser = idUser;
-    }
-
-    public Users(Integer idUser, String lastName, String name, int phone, String gender, String group, String userName, String userPassword) {
-        this.idUser = idUser;
-        this.lastName = lastName;
-        this.name = name;
-        this.phone = phone;
-        this.gender = gender;
-        this.group = group;
-        this.userName = userName;
-        this.userPassword = userPassword;
     }
 
     public Integer getIdUser() {
@@ -118,11 +100,11 @@ public class Users implements Serializable {
         this.secondName = secondName;
     }
 
-    public int getPhone() {
+    public Integer getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(Integer phone) {
         this.phone = phone;
     }
 

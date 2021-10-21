@@ -8,7 +8,7 @@ import javafx.scene.control.Button;
 
    
 
-public class MainPageController {
+public class rootController {
     
  @FXML
     private Button exit_btn;
