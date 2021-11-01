@@ -55,25 +55,18 @@ public class SecondaryController {
         em.getTransaction().begin();
                
         Users u = new Users();
+        u.setLastName(lastNameFild.getText());
         u.setName(namefild.getText());
+        u.setSecondName(secondNameFild.getText());
+        u.setUserGroup("refactoring");
+        u.setGender("x");
+        u.setPhone(phone.getText().trim());
+        u.setUserRole("user");
+        u.setUserName(loginFild.getText());
+        u.setUserPassword(passwordFild.getText());
         em.persist(u);
         em.getTransaction().commit();
-//        u.setLastName("dsfadsf");
-//        u.setName("sdfadf");
-//        u.setSecondName("SdSDASDF");
-//        u.setGroup("4bc");
-//        u.setGender("m");
-//        u.setPhone(987);
-//        u.setRole("user");
-//        u.setUserName("lox");
-//        u.setUserPassword("popusk");
-//        em.getTransaction().begin();
-//        em.persist(u);
-//        em.flush();
-//        em.getTransaction().commit();
         
-        System.out.println( " ==== " + u.getName());
-        System.out.println("ФИО: " + lastNameFild.getText() + " " + namefild.getText() + " "+ secondNameFild.getText());
-        
+        System.out.println("Account create: user name = " + loginFild.getText() + ", password = "+ passwordFild.getText());
     }
 }

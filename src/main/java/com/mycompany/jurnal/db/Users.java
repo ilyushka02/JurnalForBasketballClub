@@ -49,7 +49,7 @@ public class Users implements Serializable {
     @Column(name = "SecondName")
     private String secondName;
     @Column(name = "Phone")
-    private Integer phone;
+    private String phone;
     @Column(name = "Gender")
     private String gender;
     @Column(name = "UserGroup")
@@ -100,11 +100,11 @@ public class Users implements Serializable {
         this.secondName = secondName;
     }
 
-    public Integer getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(Integer phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
