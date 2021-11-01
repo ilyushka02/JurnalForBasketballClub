@@ -2,7 +2,6 @@ package com.mycompany.jurnal;
 
 import com.mycompany.jurnal.db.Users;
 import java.io.IOException;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
@@ -47,7 +46,7 @@ public class PrimaryController {
             if (u.getUserPassword().equals(passwordField.getText())) {
              
                 // Авторизация
-                String roleName = u.getRole().toString();
+                String roleName = u.getUserRole().toString();
                 if (roleName.equals("root")) {
                     App.setRoot("rootPage");
                 } else {

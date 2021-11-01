@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
-    <persistence-unit name="com.mycompany_Jurnal_jar_1.0-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">  
-     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-     <!-- <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>-->
+  <persistence-unit name="com.mycompany_Jurnal_jar_1.0-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <!-- <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>-->
     <class>com.mycompany.jurnal.db.Users</class>
     <class>com.mycompany.jurnal.db.Group1</class>
+    <class>com.mycompany.jurnal.db.Usergroup</class>
     <properties>
+      <property name="hibernate.show_sql" value="true"/>
       <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/jurnalforbc?zeroDateTimeBehavior=CONVERT_TO_NULL"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

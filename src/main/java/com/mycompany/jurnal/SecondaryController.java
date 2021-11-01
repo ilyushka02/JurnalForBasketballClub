@@ -1,5 +1,6 @@
 package com.mycompany.jurnal;
 
+import com.mycompany.jurnal.db.Users;
 import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -43,12 +44,35 @@ public class SecondaryController {
     @FXML
     private PasswordField passwordFild;
 
+
     @FXML
     void back(ActionEvent event) throws IOException {
       App.setRoot("Primary");  
     }   
     @FXML
     void createUser(ActionEvent event){
+
+        em.getTransaction().begin();
+               
+        Users u = new Users();
+        u.setName(namefild.getText());
+        em.persist(u);
+        em.getTransaction().commit();
+//        u.setLastName("dsfadsf");
+//        u.setName("sdfadf");
+//        u.setSecondName("SdSDASDF");
+//        u.setGroup("4bc");
+//        u.setGender("m");
+//        u.setPhone(987);
+//        u.setRole("user");
+//        u.setUserName("lox");
+//        u.setUserPassword("popusk");
+//        em.getTransaction().begin();
+//        em.persist(u);
+//        em.flush();
+//        em.getTransaction().commit();
+        
+        System.out.println( " ==== " + u.getName());
         System.out.println("ФИО: " + lastNameFild.getText() + " " + namefild.getText() + " "+ secondNameFild.getText());
         
     }

@@ -1,5 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" styleClass="bodybg" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.jurnal.rootController" />
+<VBox minHeight="200.0" minWidth="200.0" prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.jurnal.rootController">
+   <children>
+      <Button fx:id="b" mnemonicParsing="false" onAction="#backP" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #fff;" styleClass="backBtn" stylesheets="@Style.css" />
+      <TabPane prefHeight="357.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Группы">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #fff;">
+                     <children>
+                        <TableView fx:id="tableViewGroupUser" layoutX="6.0" layoutY="7.0" minHeight="200.0" minWidth="200.0" prefHeight="320.0" prefWidth="482.0">
+                          <columns>
+                            <TableColumn fx:id="idColumnUserGroup" prefWidth="122.40003061294556" text="Код" />
+                            <TableColumn fx:id="nameColumnUserGroup" prefWidth="219.20001220703125" text="Группа" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Пользователи">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableViewUser" layoutY="4.0" minHeight="200.0" minWidth="200.0" prefHeight="320.0" prefWidth="482.0">
+                           <columns>
+                              <TableColumn fx:id="columnUserId" prefWidth="30.39996373653412" text="id" />
+                              <TableColumn fx:id="columnUserLastName" prefWidth="87.20001029968262" text="Фамилия" />
+                              <TableColumn fx:id="columnUserFirstName" prefWidth="87.20001029968262" text="Имя" />
+                              <TableColumn fx:id="columnUserMidllName" prefWidth="87.20001029968262" text="Отчество" />
+                              <TableColumn fx:id="columnUserGender" prefWidth="33.60003662109375" text="Пол" />
+                              <TableColumn fx:id="columnUserUG" prefWidth="60.0" text="Группа" />
+                              <TableColumn fx:id="columnUserPhone" prefWidth="92.79999389648435" text="Телефон" />
+                           </columns>
+                        </TableView>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</VBox>

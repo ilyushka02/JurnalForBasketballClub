@@ -30,10 +30,10 @@ import javax.persistence.Table;
     @NamedQuery(name = "Users.findBySecondName", query = "SELECT u FROM Users u WHERE u.secondName = :secondName"),
     @NamedQuery(name = "Users.findByPhone", query = "SELECT u FROM Users u WHERE u.phone = :phone"),
     @NamedQuery(name = "Users.findByGender", query = "SELECT u FROM Users u WHERE u.gender = :gender"),
-    @NamedQuery(name = "Users.findByGroup", query = "SELECT u FROM Users u WHERE u.group = :group"),
+    @NamedQuery(name = "Users.findByUserGroup", query = "SELECT u FROM Users u WHERE u.userGroup = :userGroup"),
     @NamedQuery(name = "Users.findByUserName", query = "SELECT u FROM Users u WHERE u.userName = :userName"),
     @NamedQuery(name = "Users.findByUserPassword", query = "SELECT u FROM Users u WHERE u.userPassword = :userPassword"),
-    @NamedQuery(name = "Users.findByRole", query = "SELECT u FROM Users u WHERE u.role = :role")})
+    @NamedQuery(name = "Users.findByUserRole", query = "SELECT u FROM Users u WHERE u.userRole = :userRole")})
 public class Users implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -52,14 +52,14 @@ public class Users implements Serializable {
     private Integer phone;
     @Column(name = "Gender")
     private String gender;
-    @Column(name = "Group")
-    private String group;
+    @Column(name = "UserGroup")
+    private String userGroup;
     @Column(name = "userName")
     private String userName;
     @Column(name = "userPassword")
     private String userPassword;
-    @Column(name = "Role")
-    private String role;
+    @Column(name = "UserRole")
+    private String userRole;
 
     public Users() {
     }
@@ -116,12 +116,12 @@ public class Users implements Serializable {
         this.gender = gender;
     }
 
-    public String getGroup() {
-        return group;
+    public String getUserGroup() {
+        return userGroup;
     }
 
-    public void setGroup(String group) {
-        this.group = group;
+    public void setUserGroup(String userGroup) {
+        this.userGroup = userGroup;
     }
 
     public String getUserName() {
@@ -140,12 +140,12 @@ public class Users implements Serializable {
         this.userPassword = userPassword;
     }
 
-    public String getRole() {
-        return role;
+    public String getUserRole() {
+        return userRole;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setUserRole(String userRole) {
+        this.userRole = userRole;
     }
 
     @Override
