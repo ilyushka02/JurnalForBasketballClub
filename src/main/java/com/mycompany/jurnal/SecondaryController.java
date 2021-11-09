@@ -20,6 +20,8 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Text;
 import javafx.util.StringConverter;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -63,6 +65,12 @@ public class SecondaryController {
         App.setRoot("Primary");
     }
 
+     @FXML
+    private Rectangle panelForOutput;
+
+    @FXML
+    private Text textOutput;
+
     @FXML
     void initialize() {
         uploadGender();
@@ -86,10 +94,10 @@ public class SecondaryController {
         u.setUserPassword(passwordFild.getText());
         em.persist(u);
         em.getTransaction().commit();
-
-        System.out.println("Account create: user name = " + loginFild.getText() + ", password = " + passwordFild.getText());
-        System.out.println("Res ====== " + genderBox.getValue());
-
+        panelForOutput.setVisible(true);
+        textOutput.setVisible(true);
+        textOutput.setText("User create");
+        
     }
 
     private void uploadGender() {

@@ -18,7 +18,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 500 , 500);
+        scene = new Scene(loadFXML("primary"), 600 , 600);
         stage.setScene(scene);
         stage.setTitle("bcNRTC");
         stage.getIcons().add(new Image(App.class.getResourceAsStream("image/icon.png")));
