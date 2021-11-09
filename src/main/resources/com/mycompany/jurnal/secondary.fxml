@@ -68,5 +68,11 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7cc901" height="30.0" layoutX="97.0" layoutY="420.0" stroke="#7cc901" strokeType="INSIDE" width="160.0" />
       <PasswordField fx:id="passwordFild" layoutX="98.0" layoutY="421.0" prefHeight="28.0" prefWidth="158.0" promptText="new password" style="-fx-background-color: fff;" />
       <Button fx:id="AddUserBtn" layoutX="101.0" layoutY="470.0" mnemonicParsing="false" onAction="#createUser" styleClass="buttonstyle" stylesheets="@Style.css" text="Создать новый аккаунт" textFill="WHITE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7cc704e5" height="74.0" layoutX="10.0" layoutY="512.0" stroke="#7bc702" strokeType="INSIDE" style="-fx-arc-height: 30; -fx-arc-width: 30;" width="580.0" />
+      <Text fill="WHITE" layoutX="46.0" layoutY="553.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
