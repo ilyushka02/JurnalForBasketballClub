@@ -15,7 +15,6 @@ import javax.persistence.Query;
 public class PrimaryController {
     public static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("com.mycompany_Jurnal_jar_1.0-SNAPSHOTPU");
     public static EntityManager em = emf.createEntityManager();
-    
 
     @FXML
     private TextField loginFild;
@@ -28,16 +27,16 @@ public class PrimaryController {
 
     @FXML
     private Button signupBtn;
-
+    
     @FXML
     void switchToSecondary() throws IOException{
         App.setRoot("Secondary");
     }
     
-      @FXML
+    
+    @FXML
     void login() throws IOException {
         Query q = em.createNamedQuery("Users.findByUserName");
-        // Query   quer = em.createNamedQuery("")
         q.setParameter("userName", loginFild.getText());
         
         try {
@@ -59,6 +58,6 @@ public class PrimaryController {
             System.out.println("Неверный логин или пароль");
         }
     }
-
+    
 }
 

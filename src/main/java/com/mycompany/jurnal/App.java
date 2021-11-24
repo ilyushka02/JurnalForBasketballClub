@@ -15,6 +15,7 @@ import javafx.scene.image.Image;
 public class App extends Application {
 
     private static Scene scene;
+    private static Stage stage;
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -23,7 +24,13 @@ public class App extends Application {
         stage.setTitle("bcNRTC");
         stage.getIcons().add(new Image(App.class.getResourceAsStream("image/icon.png")));
         stage.show();
+        this.stage = stage;
     }
+
+    public static Stage getStage() {
+        return stage;
+    }
+
 
     static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));

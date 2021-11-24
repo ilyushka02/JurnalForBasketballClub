@@ -5,7 +5,10 @@
  */
 package com.mycompany.jurnal.db;
 
+import com.mycompany.jurnal.db.Usergroup;
+import java.io.File;
 import java.io.Serializable;
+import java.util.HashMap;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -37,6 +40,10 @@ import javax.persistence.Table;
 public class Users implements Serializable {
 
     private static final long serialVersionUID = 1L;
+
+    public static HashMap<Users, Usergroup> importUsers(File inputFile) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)

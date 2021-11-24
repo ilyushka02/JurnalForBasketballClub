@@ -46,7 +46,7 @@ public class SecondaryController {
     private TextField phone;
 
     @FXML
-    private ChoiceBox<?> groupBox;
+    private TextField userGroup;
 
     @FXML
     private Button backBtn;
@@ -74,8 +74,6 @@ public class SecondaryController {
     @FXML
     void initialize() {
         uploadGender();
-        System.out.println("GROUP ====== ");
-//        uploadUserGroup();
     }
 
     @FXML
@@ -89,6 +87,7 @@ public class SecondaryController {
         u.setSecondName(secondNameFild.getText());
         u.setPhone(phone.getText().trim());
         u.setUserRole("user");
+        u.setUserGroup(userGroup.getText());
         u.setGender(genderBox.getValue());
         u.setUserName(loginFild.getText());
         u.setUserPassword(passwordFild.getText());

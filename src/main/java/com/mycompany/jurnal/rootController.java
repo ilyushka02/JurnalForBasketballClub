@@ -2,6 +2,7 @@ package com.mycompany.jurnal;
 
 import com.mycompany.jurnal.db.Usergroup;
 import com.mycompany.jurnal.db.Users;
+import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
 import javafx.event.ActionEvent;
@@ -16,6 +17,7 @@ import java.util.List;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.ObservableList;
+import javafx.stage.FileChooser;
 import javax.persistence.Query;
 
 public class rootController {
@@ -23,8 +25,14 @@ public class rootController {
     public static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("com.mycompany_Jurnal_jar_1.0-SNAPSHOTPU");
     public static EntityManager em = emf.createEntityManager();
     
+     @FXML
+    private Button export_btn;
+
     @FXML
-    private Button b;
+    private Button import_btn;
+
+    @FXML
+    private Button backBtn;
     
     //Таблица группы
     @FXML
@@ -131,7 +139,27 @@ public class rootController {
         for (Users u : user) {
             tableModeU.add(u);
         }
-    }    
-    
+    }
+
+    @FXML
+    void exportUser(ActionEvent event) throws IOException {
+        System.out.println("Export detected ======");
+        
+        Query q = em.createNamedQuery("Users.findAll");
+        List<Users> user = q.getResultList();
+        
+        
+        FileChooser chooser = new FileChooser();
+        File outputFile = chooser.showSaveDialog(App.getStage());
+        
+        UserFunction.exportUsers(outputFile, user);
+
+    }
+
+    @FXML
+    void importUsser(ActionEvent event) {
+        System.out.println("Import detected =======");
+        
+    }   
 }
 

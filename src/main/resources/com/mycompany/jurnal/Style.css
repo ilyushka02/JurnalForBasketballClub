@@ -30,3 +30,13 @@
     -fx-background-size: 100% 100%; 
     -fx-cursor:hand;
 }
+.exportBtn{
+    -fx-background-image: url('image/export.png');
+    -fx-background-size: 100% 100%; 
+    -fx-cursor:hand;
+}
+.importBtn{
+    -fx-background-image: url('image/import.png');
+    -fx-background-size: 100% 100%; 
+    -fx-cursor:hand;
+}
