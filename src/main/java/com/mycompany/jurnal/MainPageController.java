@@ -4,21 +4,20 @@ import static com.mycompany.jurnal.PrimaryController.em;
 import java.io.IOException;
 import com.mycompany.jurnal.db.Users;
 import static com.mycompany.jurnal.rootController.em;
+import java.io.BufferedReader;
 import java.io.File;
-import java.io.InputStream;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.FileChooser;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -71,10 +70,14 @@ public class MainPageController {
     }
 
      @FXML
-    void uploadImg(ActionEvent event) {
-        System.out.println("res ====  click");
-        Image image = new Image(this.getClass().getResourceAsStream("ava.jpg"));
+    void uploadImg(ActionEvent event) throws FileNotFoundException{
+        FileChooser chooser = new FileChooser();
+        File inputFile = chooser.showOpenDialog(App.getStage());
+        FileInputStream inputstream = new FileInputStream(inputFile); 
+        Image image = new Image(inputstream);
         img.setImage(image);
+        img.setFitHeight(110);
+        img.setFitWidth(110);
     }
     
     @FXML
